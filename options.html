@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html id="ctl00_HtmlElement" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<script src="lib/js/zepto.js"></script>
+	<script src="lib/js/constants.js"></script>
+	<script src="lib/js/options.js"></script>
+	<link rel="stylesheet" href="lib/css/options.css"/>
+
+	<title>Extension options</title>
+
+	<style>
+
+	h3,h4 {
+		padding-left:20px;
+	}
+	label {
+		display: inline-block;
+		padding: 6px 20px 0 0;
+		text-align: right;
+		vertical-align: top;
+		width:130px;
+	}
+	label:after {
+		content: ":";
+	}
+	label span {
+		color:#006400;
+		font-weight: bold;
+	}
+	p.help,
+	p.option {
+		padding-left:150px;
+	}
+	*.option label {
+		padding-top: 3px;
+		width:auto;
+	}
+	*.option label:after {
+		 content:none;
+	}
+	p.button {
+		border-top:1px dashed #ccc;
+		margin-top: 20px;
+		padding: 30px 0;
+		text-align: center;
+	}
+	</style>
+	<!-- see http://codepo8.github.com/css-fork-on-github-ribbon/ -->
+	<style>#forkongithub a{background:#005;color:#fff;text-decoration:none;font-family:arial, sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#060;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style>
+</head>
+	<body>
+		<div class="form">
+
+			<h1>Extension settings</h1>
+			<p>
+				Use the form below to enable/disable features
+			</p>
+			<nav>
+				<ul>
+					<li><a href="#sectionSettings">Settings</a></li>
+					<li><a href="#sectionDonate">Donate!</a></li>
+					<li><a href="#sectionHowTo">About</a></li>
+				</ul>
+			</nav>
+			<section id="sectionHowTo" class="hidden" style="position: relative;min-height: 300px;">
+				<h2>About</h2>
+
+				<p><strong id="appName"></strong> </p>
+				<p>version:	<strong id="appVersion"></strong></p>
+
+				<span id="forkongithub"><a href="https://github.com/clanceyp/monitor-me-jenkins">Fork me on GitHub</a></span>
+
+			</section>
+			<section id="sectionDonate" class="hidden">
+				<fieldset>
+					<h2>Donate to our developers!</h2>
+					<p>Any and all donations gratefully received!!</p>
+					<form action="https://www.paypal.com/cgi-bin/webscr" id="formDonate" method="post" class="donate">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+						<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+					</form>
+					<div style="width:300px;height:300px;overflow:hidden;position: relative;border:1px solid rgba(83,103,141,1);margin-bottom:20px;"><img src="lib/i/me-2013.png" style="width:400px;position: absolute; top:-20px;left:-40px" /></div>
+
+				</fieldset>
+			</section>
+
+			<form id="formMyOptions">
+			<section id="sectionSettings" class="hidden">
+
+				<h2>Settings</h2>
+
+				<fieldset></fieldset>
+				<p class="button">
+					<input type="reset" id="resetButton" value="Reset default options"/>
+				</p>
+
+			</section>
+
+			</form>
+		</div>
+	</body>
+</html>
+

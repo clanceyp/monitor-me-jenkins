@@ -1,0 +1,174 @@
+@import url(http://fonts.googleapis.com/css?family=Mr+Bedfort);
+	@import url(http://fonts.googleapis.com/css?family=Joti+One);
+	html {
+		overflow-y: scroll;
+	}
+	body {
+		/*background-image: url("lib/i/greentiles.png");*/
+		background-color: rgba(5,171,224,1) ;
+		/*background-image: -webkit-radial-gradient(center, ellipse cover, rgba(207,241,252,1) 54%,rgba(83,203,241,1) 79%,rgba(5,171,224,1) 100%);*/
+		background-image: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(207,241,252,1) 40%, rgba(83,103,141,1) 79%, rgba(50,50,50,1) 100%);
+		font-family: sans-serif;
+		font-size:70%;
+		padding-bottom:60px;
+	}
+	div.form {
+		background-color:#fff;
+		border: 1px solid #333;
+		border-radius:10px;
+		box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+		margin:30px auto;
+		min-height: 500px;
+		padding:20px;
+		width:600px;
+	}
+	a {
+		color:#048;
+	}
+	h1,h2 {
+		color:#025;
+		font-family: "Joti One", "Mr Bedfort", "Dawning of a New Day", sans-serif;
+		font-size: 3em;
+		margin:0;
+		text-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+		padding-top:0;
+	}
+	h3,h4 {
+		color:#025;
+		font-family: "Joti One", "Mr Bedfort", "Dawning of a New Day", sans-serif;
+		font-size: 1.5em;
+		margin:0;
+		padding-top:0;
+	}
+	h1 span {
+		display: none;
+		font-size: 50%;
+		opacity: 0.5;
+	}
+	h1 span:before {
+		content:"(version, "
+	}
+	h1 span:after {
+		content:")"
+	}
+	h2 {
+		font-size: 2em;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	}
+	label {
+		display: inline-block;
+		margin-bottom: 4px;
+	}
+	textarea {
+		font-size: 1em;
+		min-height: 100px;
+		min-width:300px;
+	}
+	fieldset {
+		border: 0 none;
+		margin: 0;
+		padding: 0;
+	}
+	input[type=text] {
+		width:200px;
+	}
+	p {}
+	*.hidden {
+		display: none;
+	}
+	nav {
+
+	}
+	nav ul {
+		list-style: none;
+		margin:0 0 0 20px;
+		padding: 0;
+	}
+	nav li {
+		background-color: #eee;
+		border:1px solid #cecece;
+		border-bottom: 1px solid #eee;
+		border-radius: 5px 5px 0 0;
+		display: inline-block;
+		margin:0 3px 0 0;
+		padding:0;
+	}
+	nav li.selected {
+		background-color: #fff;
+		border-bottom: 1px solid #fff;
+		bottom: -1px;
+		position: relative;
+		z-index: 1;
+	}
+	nav li a {
+		display: block;
+		font-size: 1.2em;
+		padding:5px 12px;
+		text-decoration: none;
+	}
+	nav li.selected a {
+		color: #333;
+	}
+	section {
+		border: 1px solid #cecece;
+		border-radius: 5px ;
+		padding: 10px;
+	}
+	#maxQueueLengthDisplay {
+		color: #800;
+		display: inline-block;
+		margin-left: 3px;
+		min-width: 20px;
+		font-weight: bold;
+	}
+	*.help {
+		background-color: rgba(207,241,252,1);
+		border:1px solid rgba(83,103,141,1);
+		border-radius: 4px;
+		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+		display: inline-block;
+		left:20px;
+		opacity: 0;
+		padding:8px;
+		position: absolute;
+		top:-4px;
+		width:130px;
+		z-index: 1;
+
+		-webkit-transition-property: opacity;
+		-webkit-transition-duration: 500ms;
+		-webkit-transition-timing-function: linear;
+	}
+	span.more {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAopJREFUeNp0k19IU1Ecx3/nur9KluafkKVLA4WQUbaI6MkejLAIqgchsH8vKSbMiBUY0kNImBlaFhgUBD1ED5Eklr301F/dFGEiOp06mzp1c/fPzr13p3NuOra5fvC5v8vv/r7f87uHcxAhBAbHw7AVT17/yqHpMqWKcpDCUVyb9DVePLwCCYESDbpf/WgzGXUtleUF+sK8rIz83Vkcoj3Lq4K6HBRUtycgi5Lc1VR/pDXJYGAsBN0vv3VYLbsaqo/vNwU2VLQuqBAWVSC0KducATspRdk68vX7tDTpDT5runTUETeoaf7YWlaSe9tuLzO7fALIKoGfM9OJk4LdWgo6Oo+tOBPcLq84MbXy8MaVY62ouuF9kcmonzh10pblXpCoIcCwzwu/204kGVS1fYFDxfu0d5vFTD4PjfIRPlrOqbJytbJij8E1J6AoVgHLqiaufz4ZhwWrsW+MkVkeVZQVGJhWp8hKjWow6yIRJb5aXY8H0gUTa5k9sjOZ9rROwUpFUAIOYzWt6J3jgJbPdY4n1QORDI5qS6mLLC+vSYQghFLF/U6blmvb3dunwQpQLbAxpkReKEAGE4L/RDTNdATjGNXOs18YVNbW7SQn35DaZG3u13LJjsJtBigUUqh2iKMuL9bm/TgalcnWLm8x87hWI7XOxl/1zWGq7eM8nxr9Qpjvinino6mNibufSNjrlcQw/9TRcsajncTeAR88uP+2U5+bd92412pEHJd+P2IxkBZ8kryy1HvrzgXtKHP/6gRuOs87pKVAx8boMC/4FzDmxZiixIAhC2JMXPTj8JiLl/4sPmK9TMPQJujpn4kv0n7vjYWma5SzlNLN8izlA7vOzrt1SZfkrwADADHTjb87FtdzAAAAAElFTkSuQmCC');
+		background-position: 0 1px;
+		background-repeat: no-repeat;
+		cursor: default;
+		display: inline-block;
+		min-height: 18px;
+		min-width: 18px;
+		position: relative;
+		float:right;
+		margin-right: 130px;
+	}
+	span.more:focus span.help,
+	span.more:hover span.help{
+		opacity: 1;
+	}
+	form.donate {
+		margin:0 0 10px 0;
+		text-align: center;
+		width:300px;
+	}
+	form.donate input:hover{
+		-webkit-transform: scale(1.05)
+	}
+	#maxQueueLength {
+		position: relative;
+		top: 4px;
+	}
+	#forkongithub a {
+		-webkit-transition-property: backgroundColor;
+		-webkit-transition-duration: 250ms;
+		-webkit-transition-timing-function: linear;
+	}

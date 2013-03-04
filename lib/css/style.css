@@ -1,0 +1,30 @@
+body {
+	background-image: url(../i/background.png);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	font-family: sans-serif;
+}
+
+#wrapper {
+	min-height: 300px;
+	min-width: 300px;
+}
+
+#refreshIcon {
+	width: 19px;
+	height: 19px;
+	border: 0;
+	vertical-align: text-bottom;
+}
+
+#refresh {
+	float: right;
+	cursor: pointer;
+}
+#refresh span {
+	opacity: 0;
+	-webkit-transition: opacity 300ms linear;
+}
+#refresh:hover span {
+    opacity: 0.5
+}
