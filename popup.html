@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Jenkins Monitor - Status Popup</title>
-        <base target="_blank"/>
-        <link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
-		<script type="text/javascript" src="lib/js/zepto.js"></script>
-		<script type="text/javascript" src="lib/js/constants.js"></script>
-		<script type="text/javascript" src="lib/js/popup.js"></script>
-		<style>
-			h1 {margin-right:40px;font-size:1.1em;padding-left:10px}
-			a {text-decoration: none;}
-			ul, li {
-				margin: 0;
-				padding: 0;
-			}
-			li {
-				background-image: url(lib/i/grey19.png);
-				background-position: 10px 0px;
-				background-repeat: no-repeat;
-				padding: 0 0 10px 40px;
-			}
-			li.status-blue {
-				background-image: url(lib/i/green19.png);
-			}
-			li.status-green {
-				background-image: url(lib/i/green19.png);
-			}
-			li.status-red {
-				background-image: url(lib/i/red19.png);
-			}
-			li.status-yellow {
-				background-image: url(lib/i/yellow19.png);
-			}
-			body.SuccessMarker li.status-blue {
-				background-image: url(lib/i/blue19.png);
-			}
-			p {
-				text-align: center;
-			}
-		</style>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="refresh">
-                <span>Refresh</span><img id="refreshIcon" src="lib/i/reload19.png" alt="Refresh Button" />
-            </div>
-			<h1></h1>
-            <div id="display"><ul></ul></div>
-			<p></p>
-			<div style="text-align:center;">
-				<a href="radiator.html">radiator</a>
-				| <a href="options.html">configuration</a>
-			</div>
-        </div>
-    </body>
+<head>
+	<title>Jenkins Monitor - Status Popup</title>
+	<base target="_blank"/>
+	<script type="text/javascript" src="lib/js/zepto.js"></script>
+	<script type="text/javascript" src="lib/js/constants.js"></script>
+	<script type="text/javascript" src="lib/js/popup.js"></script>
+	<link rel="stylesheet" href="lib/css/popup.css" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="refresh">
+		<span>Refresh</span> <img id="refreshIcon" src="lib/i/reload19.png" alt="Refresh Button" />
+	</div>
+	<h1></h1>
+	<div id="display"><ul></ul></div>
+	<p></p>
+	<div style="text-align:center;">
+		<a href="radiator.html">radiator</a>
+		| <a href="options.html">configuration</a>
+	</div>
+</div>
+</body>
 </html>
