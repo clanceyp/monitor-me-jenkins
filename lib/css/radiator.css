@@ -102,7 +102,7 @@ body.dark div.unit {
 	box-shadow: inset 0 0 5px #000;
 }
 body.dark div.td {
-	border: 2px solid black;
+	border: 0px solid black;
 }
 div.row {
 	display:table-row;
@@ -149,8 +149,9 @@ a {
 	color:inherit;
 }
 #divRadiator {
-	display:table;
 	border-collapse:separate;
+    border-spacing: 5px;
+	display:table;
 	float:left;
 	width:100%;
 }
