@@ -1,0 +1,18 @@
+{"jobs":[
+	{
+		"color":"red",
+		"name":"Some name",
+		"url":"http://...",
+		"details":{
+			healthReport:["health-40to59.png"],
+			"lastBuild":{
+				"culprits":"",
+				"details":{
+					"result":""
+				},
+				"url":""
+			}
+		}
+	}
+
+]}
