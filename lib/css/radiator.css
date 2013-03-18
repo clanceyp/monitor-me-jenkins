@@ -32,7 +32,6 @@ body {
 	font-family:Arial, Helvetica, sans-serif;
 }
 body.dark {
-	background-image:url(../i/squares.png);
 	background-color:#000;
 	color:#fff;
 	margin:0;
