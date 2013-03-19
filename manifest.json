@@ -1,12 +1,12 @@
 {
 	"name": "Monitor me Jenkins"
-	,"version": "1.3"
+	,"version": "1.5"
 	,"manifest_version": 2
 	,"description": "Jenkins build monitor, a very basic radiator for Jenkins CI server"
-	,"icons": { "16": "lib/i/icon16.png"
-				,"32": "lib/i/icon32.png"
-				,"48": "lib/i/icon48.png"
-				,"128": "lib/i/icon128.png" 
+	,"icons": { "16": "lib/i/pie301.png"
+				,"32": "lib/i/pie301.png"
+				,"48": "lib/i/pie301.png"
+				,"128": "lib/i/pie301.png"
 	}
 	,"browser_action": {
 		"default_icon": "lib/i/icon19.png"
