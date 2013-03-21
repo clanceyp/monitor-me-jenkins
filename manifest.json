@@ -25,6 +25,7 @@
 	,"permissions": [
 		"tabs"
 		,"http://*/"
+		,"https://*/"
 		,"background"
 	]
 }
