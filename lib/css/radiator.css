@@ -66,7 +66,7 @@ div.yellow, div.yellow_anime {
 	background-color:yellow;
 	color:black;
 }
-div.grey,div.gray,div.grey_anime,div.gray_anime,div.aborted,div.aborted_anime,div.disabled,div.disabled {
+div.grey,div.gray,div.grey_anime,div.gray_anime,div.aborted,div.aborted_anime,div.disabled {
 	background-color:gray;
 	color:black;
 }
