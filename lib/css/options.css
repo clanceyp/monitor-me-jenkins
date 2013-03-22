@@ -73,6 +73,9 @@
 		width:200px;
 	}
 	p {}
+	p.note {
+		padding-left:150px;
+	}
 	*.hidden {
 		display: none;
 	}
