@@ -1,99 +1,119 @@
-@font-face {
-			font-family: 'Quando';
-			font-style: normal;
-			font-weight: 400;
-			src: local('Quando-Regular'), url(lib/css/qVv1zuxOTRil_FcBMa30Kg.woff) format('woff');
-		}
-		body {
-			background-image: url(../i/background.png);
-			background-position: 0% 100%;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			font-family: sans-serif;
-			font-size:80%;
-			overflow-y: scroll;
-		}
-		h1,h2,h3 {
-			font-family: 'Quando', serif;
-		}
-		h1 {margin-right:40px;font-size:1.4em;padding-left:10px}
-		a {
-			color:#555;
-			text-decoration: none;
-		}
-		a:hover,
-		a:focus {
-			color:#000;
-			text-decoration:underline;
-		}
-		ul, li {
-			margin: 0;
-			padding: 0;
-		}
-		li {
-			background-image: url(../i/grey19.png);
-			background-position: 10px 0px;
-			background-repeat: no-repeat;
-			font-size:1em;
-			padding: 0 0 10px 40px;
-		}
-		li.status-blue {
-			background-image: url(../i/green19.png);
-		}
-		li.status-green {
-			background-image: url(../i/green19.png);
-		}
-		li.status-red {
-			background-image: url(../i/red19.png);
-		}
-		li.status-yellow {
-			background-image: url(../i/yellow19.png);
-		}
-		body.SuccessMarker li.status-blue {
-			background-image: url(../i/blue19.png);
-		}
-		li.waiting {
-			min-height: 50px;
-			background-position-x: 0%;
-			-webkit-animation-duration: 2s;
-			-webkit-animation-name: waiting;
-			-webkit-animation-iteration-count: infinite;
-			-webkit-animation-timing-function: ease-in-out;
-			-webkit-animation-direction: alternate;
-		}
-		@-webkit-keyframes waiting {
-				from {
-					background-position-x: 5%;
-				}
-				50% {
-					background-position-x: 95%;
-				}
-				to {
-					background-position-x: 5%;
-				}
-			}
-		div#wrapper {
-			min-height: 300px;
-			min-width: 300px;
-		}
-		img#refreshIcon {
-			width: 19px;
-			height: 19px;
-			border: 0;
-			vertical-align: text-bottom;
-		}
+@import url(http://fonts.googleapis.com/css?family=Quando);
 
-		#refresh {
-			cursor: pointer;
-			float: right;
-		}
+body {
+    background-image: url(../i/background.png);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    font-size:80%;
+    overflow-y: scroll;
+}
+h1,h2,h3 {
+    font-family: 'Quando', serif;
+}
+h1 {font-size:1.2em;padding-left:10px}
+h1 span.version {font-size: 50%;opacity: 0.5}
+h1 span.version:before {
+    content: ' (ver '
+}
+h1 span.version:after {
+    content:')'
+}
+a {
+    color:#555;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color:#000;
+    text-decoration:underline;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    background-image: url(../i/grey19.png);
+    background-position: 10px 0px;
+    background-repeat: no-repeat;
+    font-size:1em;
+    padding: 0 0 10px 40px;
+}
+li.status-blue {
+    background-image: url(../i/green19.png);
+}
+li.status-green {
+    background-image: url(../i/green19.png);
+}
+li.status-red {
+    background-image: url(../i/red19.png);
+}
+li.status-yellow {
+    background-image: url(../i/yellow19.png);
+}
+body.SuccessMarker li.status-blue {
+    background-image: url(../i/blue19.png);
+}
+li.waiting {
+    min-height: 50px;
+    background-position-x: 0%;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: waiting;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes waiting {
+    from {
+        background-position-x: 5%;
+    }
+    50% {
+        background-position-x: 95%;
+    }
+    to {
+        background-position-x: 5%;
+    }
+}
+div#wrapper {
+    min-height: 300px;
+    min-width: 300px;
+}
+img#refreshIcon {
+    width: 19px;
+    height: 19px;
+    border: 0;
+    vertical-align: text-bottom;
+}
 
-		#refresh span {
-			color: #aaa;
-			opacity: 0;
+#refresh {
+    cursor: pointer;
+    float: right;
+}
 
-			-webkit-transition: opacity 300ms linear;
-		}
-		#refresh:hover span {
-			opacity: 1;
-		}
+#refresh span {
+    color: #aaa;
+    opacity: 0;
+
+    -webkit-transition: opacity 300ms linear;
+}
+#refresh:hover span {
+    opacity: 1;
+}
+@-webkit-keyframes pulse {
+	 0% {
+	   opacity: 1.0;
+	 }
+	 50% {
+	   opacity: 0.2;
+	 }
+	 100% {
+	   opacity: 1.0;
+	 }
+}
+li.anime{
+    -webkit-animation-name:pulse;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration:2s;
+}
