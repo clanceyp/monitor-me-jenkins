@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenkins Monitor - Status Popup</title>
-	<base target="_blank"/>
-	<script type="text/javascript" src="lib/js/zepto.js"></script>
-	<script type="text/javascript" src="lib/js/constants.js"></script>
-	<script type="text/javascript" src="lib/js/popup.js"></script>
-	<link rel="stylesheet" href="lib/css/popup.css" />
+    <title>Jenkins Monitor - Status Popup</title>
+    <base target="_blank"/>
+    <script type="text/javascript" src="lib/js/vendor/zepto.js"></script>
+    <script type="text/javascript" src="lib/js/vendor/can.custom.js"></script>
+    <script type="text/javascript" src="lib/js/constants.js"></script>
+    <script type="text/javascript" src="lib/js/popup.js"></script>
+    <link rel="stylesheet" href="lib/css/popup.css" />
 </head>
 <body>
 <div id="wrapper">
@@ -14,13 +15,18 @@
 		<span>Refresh</span> <img id="refreshIcon" src="lib/i/reload19.png" alt="Refresh Button" />
 	</div>
 	<h1></h1>
-	<div id="display"><ul></ul></div>
+	<div id="display"><ul id="jenkins-list"></ul></div>
 	<p class="message"></p>
-	<div style="text-align:center;">
-		<a id="login" href="#">Log in</a>
+	<div id="footer" style="text-align:center;">
+		<a id="login" href="#">Login</a>
 		| <a href="radiator.html">radiator</a>
 		| <a href="options.html">configuration</a>
 	</div>
 </div>
+<script id="jenkins-list-item" type="text/mustache">
+    {{#jobs}}
+    <li class="status-{{color}}"><a href="{{url}}">{{name}}</a></li>
+    {{/jobs}}
+</script>
 </body>
 </html>

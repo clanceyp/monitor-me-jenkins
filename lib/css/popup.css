@@ -55,14 +55,20 @@ li.status-yellow {
 body.SuccessMarker li.status-blue {
     background-image: url(../i/blue19.png);
 }
-li.waiting {
-    min-height: 50px;
+p.message {
+    background-image: none;
+    background-position: 10px 0px;
+    background-repeat: no-repeat;
     background-position-x: 0%;
     -webkit-animation-duration: 2s;
     -webkit-animation-name: waiting;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-direction: alternate;
+}
+body.update-pending p.message {
+    background-image: url(../i/red19.png);
+    min-height: 20px;
 }
 @-webkit-keyframes waiting {
     from {
@@ -78,6 +84,13 @@ li.waiting {
 div#wrapper {
     min-height: 300px;
     min-width: 300px;
+    padding-bottom:20px;
+    position: relative;
+}
+div#footer {
+    bottom:0;
+    position: absolute;
+    width:100%;
 }
 img#refreshIcon {
     width: 19px;
