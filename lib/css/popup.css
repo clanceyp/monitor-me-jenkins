@@ -52,6 +52,13 @@ li.status-red {
 li.status-yellow {
     background-image: url(../i/yellow19.png);
 }
+h1 a, h1 a:focus {
+    outline: none;
+    text-decoration: none;
+}
+h1 a:hover {
+    text-decoration: underline
+}
 body.SuccessMarker li.status-blue {
     background-image: url(../i/blue19.png);
 }
