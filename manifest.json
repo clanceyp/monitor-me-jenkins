@@ -1,6 +1,6 @@
 {
     "name": "Monitor me Jenkins"
-    ,"version": "1.12"
+    ,"version": "1.13"
     ,"manifest_version": 2
     ,"description": "Jenkins build monitor, a very basic radiator for Jenkins CI server"
     ,"icons": { "16": "lib/i/pie301.png"
