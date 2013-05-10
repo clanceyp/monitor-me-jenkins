@@ -51,7 +51,10 @@ div.anime{
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 }
-
+body.SuccessMarker_true div.blue,
+body.SuccessMarker_true div.blue_anime{
+    background-color:blue;
+}
 div.blue, div.blue_anime {
 	background-color:green;
 }
