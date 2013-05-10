@@ -52,6 +52,10 @@ li.status-red {
 li.status-yellow {
     background-image: url(../i/yellow19.png);
 }
+li a {
+    display: inline-block;
+    padding-top: 1px;
+}
 h1 a, h1 a:focus {
     outline: none;
     text-decoration: none;
