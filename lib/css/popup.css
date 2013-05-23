@@ -81,6 +81,9 @@ body.update-pending p.message {
     background-image: url(../i/red19.png);
     min-height: 20px;
 }
+body.update-pending p.message, body.update-pending p.message a {
+    color: transparent;
+}
 @-webkit-keyframes waiting {
     from {
         background-position-x: 5%;
