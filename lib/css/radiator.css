@@ -18,17 +18,19 @@
 @-webkit-keyframes pulse {
 	 0% {
 	   opacity: 1.0;
+	   -webkit-transform: scale(1);
 	 }
 	 50% {
 	   opacity: 0.6;
+	   -webkit-transform: scale(0.985);
 	 }
 	 100% {
 	   opacity: 1.0;
+	   -webkit-transform: scale(1);
 	 }
 }
 div.anime{
     -webkit-animation-name:pulse;
-    background-image: none!important;
 }
 
 body {
@@ -46,6 +48,10 @@ div.anime{
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-duration:2s;
 	opacity:1;
+    transform: scale(1);
+}
+div.anime a {
+    text-shadow: 0 0 #000 !important;
 }
 #divDateDisplay_under {
 	-webkit-animation-iteration-count: infinite;
@@ -69,17 +75,18 @@ div.silver, div.silver_anime  {
 	color:black;
 }
 div.yellow, div.yellow_anime {
-	background-color:yellow;
-	color:black;
+	background-color:#E6DE00;
+	color:#333;
 }
 div.grey,div.gray,div.grey_anime,div.gray_anime,div.aborted,div.aborted_anime,div.disabled {
 	background-color:gray;
-	color:black;
+	color:#333;
 }
 div.unit a {
 	color:inherit;
-	text-decoration:none
+	text-decoration:none;
 }
+
 /*
 div.unit {
 	width:45%;
@@ -108,8 +115,22 @@ body.glossy div.unit {
   padding: 15px;
 }
 body.glossy div.unit {
-    background-image: radial-gradient(farthest-corner at 100% 100%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
+     /* background-image: radial-gradient(farthest-corner at 100% 100%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);*/
+background-image: linear-gradient(-60deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 100%);
+/*background-image: linear-gradient(-65deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0) 100%);
+*/
 }
+body.glossy div.unit.yellow {
+   /* background-image: linear-gradient(-60deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(-60deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%); */
+}
+body.glossy div.unit a {
+    text-shadow: -1px -1px #333;
+}
+body.glossy div.unit.yellow a {
+    text-shadow: 1px 1px #fff ;
+}
+
 /*
 body.glossy div.unit:before {
     content:"";
