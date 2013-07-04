@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.3.1/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.3.1/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine-html.js"></script>
+
+	<script type="text/javascript" src="onload.js"></script>
+
+	<script type="text/javascript" src="../../lib/js/vendor/underscore.js"></script>
+	<script type="text/javascript" src="../../lib/js/vendor/zepto.js"></script>
+	<script type="text/javascript" src="../../lib/js/vendor/can.custom.js"></script>
+    <script type="text/javascript" src="../../lib/js/constants.js"></script>
+
+
+    <script type="text/javascript">
+        var noop = function(){};
+        window.chrome = {
+            runtime:{
+                getManifest:function(){return {name:'',version:1}}
+            },
+            browserAction:{
+                setIcon:noop,
+                setBadgeText:function(item){return item.text;},
+                setTitle:noop
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="../../lib/js/background.js"></script>
+	<script type="text/javascript" src="spec/BackgroundSpec.js"></script>
+
+
+</head>
+
+<body>
+</body>
+</html>
