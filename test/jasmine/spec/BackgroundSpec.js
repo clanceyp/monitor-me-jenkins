@@ -75,7 +75,23 @@ describe("Background", function() {
 
     describe("When getting a URL ", function() {
         it("should remove double slashes ", function() {
-            expect( mmj.urlCleaner( 'http://someurl///blah' ) ).toEqual( "http://someurl/blah" );
+            expect( mmj.urlCleaner( 'http://someurl///blah/' ) ).toEqual( "http://someurl/blah/" );
+        });
+    });
+
+    describe("When escaping a URL ", function() {
+        it("should escape string if they are the last in the url path ", function() {
+            expect( mmj.util.escape( 'http://someurl///blah/im escaped/' )  ).toEqual( "http://someurl///blah/im%20escaped/" );
+            expect( mmj.util.escape( 'http://someurl///blah/im%20escaped/' )  ).toEqual( "http://someurl///blah/im%20escaped/" );
+            expect( mmj.util.escape( 'http://someurl///blah/im not escaped/but i am/' )  ).toEqual( "http://someurl///blah/im not escaped/but%20i%20am/" );
+        });
+        it("should not double escape string if user adds an escaped url", function() {
+            expect( mmj.util.escape( ' /' )  ).toEqual( "%20/" );
+            expect( mmj.util.escape( '%20/' )  ).toEqual( "%20/" );
+        });
+        it("should append a final / to the end of the url if needed", function() {
+            expect( mmj.util.escape( 'http://someurl/blah/' )  ).toEqual( "http://someurl/blah/" );
+            expect( mmj.util.escape( 'http://someurl/blah' )  ).toEqual( "http://someurl/blah/" );
         });
     });
 

@@ -90,6 +90,10 @@
 @-webkit-keyframes visible {
 	 0% {
 	   opacity: 0;
+	   -webkit-transform: scale(1);
+	 }
+	 1% {
+	   opacity: 0;
 	   -webkit-transform: scale(2);
 	 }
 	 6% {
@@ -241,6 +245,8 @@ body.glossy div.unit.yellow {
 body.glossy div.unit a {
     text-shadow: -1px -1px #333;
 }
+body.glossy div.unit.grey a,
+body.glossy div.unit.unknown a,
 body.glossy div.unit.yellow a,
 body.glossy div.unit.disabled a {
     text-shadow: 1px 1px #fff ;
