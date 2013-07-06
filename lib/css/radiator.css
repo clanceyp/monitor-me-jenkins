@@ -69,49 +69,71 @@
 	 }
 }
 
-@-webkit-keyframes visibleOld {
-	 0% {
-	   opacity: 0;
-	   -webkit-transform: scale(0) rotate(-90deg) skewY(-45deg);
-	 }
-	 10% {
-	   opacity: 1;
-	   -webkit-transform: scale(1) rotate(0deg) skewY(0deg);
-	 }
-	 80% {
-	   opacity: 1;
-	   -webkit-transform: scale(1);
-	 }
-	 100% {
-	   opacity: 0;
-	   -webkit-transform: scale(0.5);
-	 }
-}
-@-webkit-keyframes visible {
+@-webkit-keyframes radiatorZoom60s {
 	 0% {
 	   opacity: 0;
 	   -webkit-transform: scale(1);
 	 }
 	 1% {
 	   opacity: 0;
-	   -webkit-transform: scale(2);
+	   -webkit-transform: scale(0.3);
 	 }
-	 6% {
-	   opacity: 0.7;
+	 3% {
+	   opacity: 1;
 	   -webkit-transform: scale(1);
 	 }
-	 8%{
-	    opacity:1
+	 97% {
+	   opacity: 1;
+	   -webkit-transform: scale(1);
+	 }
+	 99% {
+	   opacity: 0;
+	   -webkit-transform: scale(3);
+	 }
+	 100%{
+	   opacity: 0;
+	   -webkit-transform: scale(1);
+	 }
+}
+@-webkit-keyframes radiatorZoom30s {
+	 0% {
+	   opacity: 0;
+	   -webkit-transform: scale(1);
+	 }
+	 1% {
+	   opacity: 0;
+	   -webkit-transform: scale(0.3);
+	 }
+	 6% {
+	   opacity: 1;
+	   -webkit-transform: scale(1);
 	 }
 	 94% {
 	   opacity: 1;
 	   -webkit-transform: scale(1);
 	 }
-	 100% {
+	 99% {
 	   opacity: 0;
-	   -webkit-transform: scale(0.5);
+	   -webkit-transform: scale(3);
+	 }
+	 100%{
+	   opacity: 0;
+	   -webkit-transform: scale(1);
 	 }
 }
+div.radiator.radiatorZoom30s {
+    -webkit-animation-name: radiatorZoom30s;
+    -webkit-animation-duration:30s;
+    display:table;
+}
+div.radiator.radiatorSwip60s {
+    -webkit-animation-name: radiatorSwip60s;
+    -webkit-animation-duration:30s;
+    display:table;
+}
+
+
+
 
 div.anime{
     -webkit-animation-name:pulse;
@@ -150,11 +172,6 @@ div.radiator.close {
     -webkit-animation-timing-function: linear;
     opacity:0;
     transform: scale(1);
-}
-div.radiator.visible {
-    -webkit-animation-name: visible;
-    -webkit-animation-duration:30s;
-    display:table;
 }
 
 
@@ -247,6 +264,7 @@ body.glossy div.unit a {
 }
 body.glossy div.unit.grey a,
 body.glossy div.unit.unknown a,
+body.glossy div.unit.aborted a,
 body.glossy div.unit.yellow a,
 body.glossy div.unit.disabled a {
     text-shadow: 1px 1px #fff ;
