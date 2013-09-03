@@ -365,8 +365,9 @@ body.showInfo div.radiator {
 	padding:40px 20px 20px 20px ;
 	position:absolute;
 	width:200px;
-
-	-webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.3)));
+}
+body.radiator-count-false #divInfo{
+    -webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.3)));
 }
 h1 {font-size:120%;font-weight:500;margin-top:0;}
 #divDateDisplay, #divDateDisplay_under {
